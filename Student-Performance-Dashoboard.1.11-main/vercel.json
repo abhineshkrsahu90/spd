@@ -1,5 +1,18 @@
 {
-  "buildCommand": "cd frontend && npm ci && npm run build",
+  "version": 2,
+  "framework": null,
+  "buildCommand": "cd frontend && npm ci --prefer-offline && npx -y vite build && cd ..",
   "outputDirectory": "frontend/dist",
-  "framework": "vite"
+  "installCommand": null,
+  "nodeVersion": "18.x",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }

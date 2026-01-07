@@ -9,8 +9,17 @@
   },
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/index.html",
       "dest": "/index.html"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "status": 200
     }
   ]
 }

@@ -1,13 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "npm ci --prefix frontend && npm run build --prefix frontend",
+  "framework": null,
+  "buildCommand": "cd frontend && npm ci && npm run build",
   "outputDirectory": "frontend/dist",
-  "projectSettings": {
-    "installCommand": "npm ci --prefix frontend",
-    "buildCommand": "npm run build --prefix frontend",
-    "outputDirectory": "frontend/dist",
-    "nodeVersion": "18.x"
-  },
+  "installCommand": "cd frontend && npm ci",
   "routes": [
     {
       "src": "/api/(.*)",

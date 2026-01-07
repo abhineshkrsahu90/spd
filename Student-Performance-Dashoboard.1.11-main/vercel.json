@@ -2,7 +2,7 @@
   "version": 2,
   "framework": null,
   "installCommand": null,
-  "buildCommand": "cd frontend && npm install && npm run build",
+  "buildCommand": "cd frontend && mv vite.config.mjs vite.config.ts && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "env": {
     "VITE_API_BASE_URL": "https://your-backend-api.com/api"

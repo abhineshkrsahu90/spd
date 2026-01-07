@@ -20,9 +20,9 @@ try:
         
         app = create_app()
         
-        print(f"✓ Flask app created successfully")
-        print(f"✓ Starting server on http://127.0.0.1:5000")
-        print(f"✓ Press Ctrl+C to stop\n")
+        print(f"[OK] Flask app created successfully")
+        print(f"[OK] Starting server on http://127.0.0.1:5000")
+        print(f"[OK] Press Ctrl+C to stop\n")
         
         app.run(
             host='0.0.0.0',
@@ -32,7 +32,7 @@ try:
         )
         
 except Exception as e:
-    print(f"✗ ERROR: {str(e)}")
+    print(f"[ERROR] {str(e)}")
     import traceback
     traceback.print_exc()
     sys.exit(1)

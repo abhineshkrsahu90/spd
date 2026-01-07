@@ -34,9 +34,9 @@ def init_db(app):
     with app.app_context():
         db.create_all()
         if database_url:
-            print(f"✓ Database initialized with PostgreSQL: {database_url.split('@')[1]}")
+            print(f"[OK] Database initialized with PostgreSQL: {database_url.split('@')[1]}")
         else:
-            print(f"✓ Database initialized at: {app.config['SQLALCHEMY_DATABASE_URI']}")
+            print(f"[OK] Database initialized at: {app.config['SQLALCHEMY_DATABASE_URI']}")
     
     return db
 
@@ -45,4 +45,4 @@ def reset_db(app):
     with app.app_context():
         db.drop_all()
         db.create_all()
-        print("✓ Database reset successfully")
+        print("[OK] Database reset successfully")

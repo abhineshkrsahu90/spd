@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "framework": null,
-  "buildCommand": "cd frontend && npm ci --prefer-offline && npx -y vite build && cd ..",
+  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
-  "installCommand": null,
-  "nodeVersion": "18.x",
+  "env": {
+    "VITE_API_BASE_URL": "https://your-backend-api.com/api"
+  },
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
     {
       "src": "/(.*)",
       "dest": "/index.html"

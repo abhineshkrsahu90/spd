@@ -1,0 +1,16 @@
+Flask>=3.0.0
+Flask-CORS>=4.0.0
+python-dotenv>=1.0.0
+Werkzeug>=3.0.0
+
+# Production server
+gunicorn>=21.2.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.26.0
+
+# Database
+Flask-SQLAlchemy>=3.0.5
+SQLAlchemy>=2.0.0
+Flask-Migrate>=4.0.0
